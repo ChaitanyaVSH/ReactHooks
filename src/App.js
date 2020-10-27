@@ -1,7 +1,8 @@
 import "./App.css";
 import Counter from "./components/Counter";
 import HookCounter from "./components/HookCounter";
-import HookSuperCounter from "./HookSuperCounter";
+import HookCounterObject from "./components/HookCounterObject";
+import HookSuperCounter from "./components/HookSuperCounter";
 
 function App() {
   return (
@@ -9,6 +10,8 @@ function App() {
       <Counter />
       <HookCounter />
       <HookSuperCounter />
+      <br />
+      <HookCounterObject />
     </div>
   );
 }
