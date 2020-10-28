@@ -18,11 +18,9 @@ function HookWithArray() {
       <button onClick={addItem}>Add Item</button>
       <br />
       Items:
-      <ul>
-        {items.map((item) => (
-          <h2 key={item.id}>Item: {item.value}</h2>
-        ))}
-      </ul>
+      {items.map((item) => (
+        <h2 key={item.id}>Item: {item.value}</h2>
+      ))}
     </div>
   );
 }
