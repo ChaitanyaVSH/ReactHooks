@@ -20,7 +20,7 @@ class Counter extends Component {
     return (
       <div>
         <button onClick={this.handleClick}>
-          Clicked {this.state.counter} times.
+          Class Counter Clicked {this.state.counter} times.
         </button>
       </div>
     );

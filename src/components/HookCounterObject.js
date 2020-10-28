@@ -4,6 +4,7 @@ function HookCounterObject() {
   const [name, setName] = useState({ firstName: "", lastName: "" });
   return (
     <div>
+      <h1>useState() Hook with Object</h1>
       <label>FirstName:</label>
       <input
         type="text"
