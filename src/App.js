@@ -20,7 +20,7 @@ function App() {
       <HookWithArray /> */}
 
       {/* useEffect() Hooks */}
-      <ClassCounter />
+      {/* <ClassCounter /> */}
       <HookCounter />
     </div>
   );
