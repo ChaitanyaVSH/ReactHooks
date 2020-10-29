@@ -17,6 +17,9 @@ class ClassMouse extends Component {
     // console.log("CDM");
     window.addEventListener("mousemove", this.logMouse);
   }
+  componentWillUnmount() {
+    window.removeEventListener("mousemove", this.logMouse);
+  }
   render() {
     // console.log("Render");
     return (

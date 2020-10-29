@@ -7,6 +7,7 @@ import HookSuperCounter from "./components/useStateHook/HookSuperCounter";
 import HookWithArray from "./components/useStateHook/HookWithArray";
 import ClassMouse from "./components/useEffectHook/ClassMouse";
 import HookMouse from "./components/useEffectHook/HookMouse";
+import MouseContainer from "./components/useEffectHook/MouseContainer";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <HookCounter />
       <ClassMouse />
       {/* <HookMouse /> */}
+      <MouseContainer />
     </div>
   );
 }

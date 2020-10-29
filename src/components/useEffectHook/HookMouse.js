@@ -10,11 +10,18 @@ function HookMouse() {
     setY(e.clientY);
   };
   useEffect(() => {
-    console.log("useEffect Called");
+    // console.log("useEffect Called");
     window.addEventListener("mousemove", logMouse);
+
+    // This function is returned when the component unmounts.
+    return () => {
+      console.log("Component Unmounting");
+      window.removeEventListener("mousemove", logMouse);
+    };
   }, []);
   return (
     <div>
+      <h1>Hook Mouse</h1>
       <h2>X: {x}</h2>
       <h2>Y: {y}</h2>
     </div>
