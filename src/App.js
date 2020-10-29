@@ -5,6 +5,8 @@ import HookCounter from "./components/useEffectHook/HookCounter";
 import HookCounterObject from "./components/useStateHook/HookCounterObject";
 import HookSuperCounter from "./components/useStateHook/HookSuperCounter";
 import HookWithArray from "./components/useStateHook/HookWithArray";
+import ClassMouse from "./components/useEffectHook/ClassMouse";
+import HookMouse from "./components/useEffectHook/HookMouse";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
       {/* useEffect() Hooks */}
       {/* <ClassCounter /> */}
       <HookCounter />
+      <ClassMouse />
+      {/* <HookMouse /> */}
     </div>
   );
 }
