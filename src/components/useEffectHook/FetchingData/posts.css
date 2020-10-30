@@ -1,0 +1,23 @@
+.container {
+  border-left: 5px solid lightgreen;
+  text-align: start;
+  padding: 10px;
+  margin: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.postcontainer {
+  border-left: 5px solid lightgreen;
+  text-align: start;
+  padding: 10px;
+  margin: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto;
+}
+
+.postcontainer > * {
+  margin: 5px;
+}

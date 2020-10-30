@@ -10,6 +10,7 @@ import HookMouse from "./components/useEffectHook/HookMouse";
 import MouseContainer from "./components/useEffectHook/MouseContainer";
 import IntervalClassCounter from "./components/useEffectHook/IntervalClassCounter";
 import IntervalHookCounter from "./components/useEffectHook/IntervalHookCounter";
+import DataFetching from "./components/useEffectHook/FetchingData/DataFetching";
 
 function App() {
   return (
@@ -32,8 +33,11 @@ function App() {
       <MouseContainer /> */}
 
       {/* useEffect() with incorrect dependency */}
-      <IntervalClassCounter />
-      <IntervalHookCounter />
+      {/* <IntervalClassCounter />
+      <IntervalHookCounter /> */}
+
+      {/* Data Fetching with hooks */}
+      <DataFetching />
     </div>
   );
 }
