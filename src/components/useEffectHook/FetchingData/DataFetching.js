@@ -5,6 +5,7 @@ import "./posts.css";
 function DataFetching() {
   const [post, getPost] = useState({});
   const [id, setId] = useState(1);
+  const [idFromButton, setIdFromButton] = useState(1);
 
   useEffect(() => {
     axios
@@ -14,10 +15,14 @@ function DataFetching() {
         getPost(response.data);
       })
       .catch(() => {});
-  }, [id]);
+  }, [idFromButton]);
 
   const handleChange = (e) => {
     setId(e.target.value);
+  };
+
+  const handleClick = () => {
+    setIdFromButton(id);
   };
 
   return (
@@ -30,6 +35,7 @@ function DataFetching() {
         placeholder="Enter id"
         onChange={handleChange}
       />
+      <button onClick={handleClick}>Search</button>
       <br />
       <hr />
       <h2>{post.title}</h2>
