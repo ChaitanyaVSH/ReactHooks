@@ -8,6 +8,8 @@ import HookWithArray from "./components/useStateHook/HookWithArray";
 import ClassMouse from "./components/useEffectHook/ClassMouse";
 import HookMouse from "./components/useEffectHook/HookMouse";
 import MouseContainer from "./components/useEffectHook/MouseContainer";
+import IntervalClassCounter from "./components/useEffectHook/IntervalClassCounter";
+import IntervalHookCounter from "./components/useEffectHook/IntervalHookCounter";
 
 function App() {
   return (
@@ -24,10 +26,14 @@ function App() {
 
       {/* useEffect() Hooks */}
       {/* <ClassCounter /> */}
-      <HookCounter />
+      {/* <HookCounter />
       <ClassMouse />
-      {/* <HookMouse /> */}
-      <MouseContainer />
+      <HookMouse />
+      <MouseContainer /> */}
+
+      {/* useEffect() with incorrect dependency */}
+      <IntervalClassCounter />
+      <IntervalHookCounter />
     </div>
   );
 }
