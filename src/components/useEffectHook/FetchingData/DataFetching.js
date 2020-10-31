@@ -4,8 +4,7 @@ import "./posts.css";
 
 function DataFetching() {
   const [post, getPost] = useState({});
-  const [id, setId] = useState(1);
-  const [idFromButton, setIdFromButton] = useState(id);
+  const [id, setId] = useState(0);
 
   const inputRef = React.createRef();
 
@@ -17,29 +16,18 @@ function DataFetching() {
         getPost(response.data);
       })
       .catch(() => {});
-  }, [idFromButton]);
-
-  const handleChange = (e) => {
-    console.log("Handling Change of Input");
-    setId(e.target.value);
-  };
+  }, [id]);
 
   const handleClick = () => {
-    console.log(inputRef.current.value);
-    setIdFromButton(id);
+    // console.log(inputRef.current.value);
+    // console.log("id: " + inputRef.current.value);
+    setId(inputRef.current.value);
   };
 
   return (
     <div>
       <h1>Posts</h1>
-      <input
-        type="text"
-        name="postid"
-        value={id}
-        placeholder="Enter id"
-        onChange={handleChange}
-        ref={inputRef}
-      />
+      <input type="text" name="postid" placeholder="Enter id" ref={inputRef} />
       <button onClick={handleClick}>Search</button>
       <br />
       <hr />
