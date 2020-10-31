@@ -14,6 +14,7 @@ import DataFetching from "./components/useEffectHook/FetchingData/DataFetching";
 import ComponentC from "./components/useContextHook/ComponentC";
 import React from "react";
 import CounterOne from "./components/useReducerHook/CounterOne";
+import CounterTwo from "./components/useReducerHook/CounterTwo";
 
 export const userContext = React.createContext();
 
@@ -51,6 +52,7 @@ function App() {
 
       {/* useReducer() hook */}
       <CounterOne />
+      <CounterTwo />
     </div>
   );
 }
