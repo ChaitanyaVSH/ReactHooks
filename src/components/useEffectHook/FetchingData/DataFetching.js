@@ -5,7 +5,9 @@ import "./posts.css";
 function DataFetching() {
   const [post, getPost] = useState({});
   const [id, setId] = useState(1);
-  const [idFromButton, setIdFromButton] = useState(1);
+  const [idFromButton, setIdFromButton] = useState(id);
+
+  const inputRef = React.createRef();
 
   useEffect(() => {
     axios
@@ -18,10 +20,12 @@ function DataFetching() {
   }, [idFromButton]);
 
   const handleChange = (e) => {
+    console.log("Handling Change of Input");
     setId(e.target.value);
   };
 
   const handleClick = () => {
+    console.log(inputRef.current.value);
     setIdFromButton(id);
   };
 
@@ -34,6 +38,7 @@ function DataFetching() {
         value={id}
         placeholder="Enter id"
         onChange={handleChange}
+        ref={inputRef}
       />
       <button onClick={handleClick}>Search</button>
       <br />
