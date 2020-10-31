@@ -13,6 +13,7 @@ import IntervalHookCounter from "./components/useEffectHook/IntervalHookCounter"
 import DataFetching from "./components/useEffectHook/FetchingData/DataFetching";
 import ComponentC from "./components/useContextHook/ComponentC";
 import React from "react";
+import CounterOne from "./components/useReducerHook/CounterOne";
 
 export const userContext = React.createContext();
 
@@ -44,9 +45,12 @@ function App() {
       {/* <DataFetching /> */}
 
       {/* useContext() hook */}
-      <userContext.Provider value="Chaitu Maverick">
+      {/* <userContext.Provider value="Chaitu Maverick">
         <ComponentC />
-      </userContext.Provider>
+      </userContext.Provider> */}
+
+      {/* useReducer() hook */}
+      <CounterOne />
     </div>
   );
 }
